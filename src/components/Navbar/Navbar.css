@@ -28,6 +28,7 @@
 .logo {
   width: 150px;
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .titulo {
@@ -49,12 +50,14 @@
   border-top-right-radius: 15px;
   cursor: pointer;
   font-size: 18px;
+  text-decoration: underline;
 }
 
 .link-desactivado {
   color: white;
   cursor: pointer;
   font-size: 18px;
+  text-decoration: underline;
 }
 
 /* Media query para ajustar el menú de navegación en pantallas más pequeñas */
