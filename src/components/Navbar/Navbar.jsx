@@ -28,12 +28,7 @@ export const Navbar = () => {
   return (
     <nav className="menu-navegacion">
       <div className="menu-columna-1">
-        <img
-          src="/images/logo.png"
-          alt="Logo de la app de una ciudad"
-          className="logo"
-          onClick={() => onClickHandlerNavigate("principal")}
-        />
+        <img src="/images/logo.png" alt="Logo de la app de una ciudad" className="logo" onClick={() => onClickHandlerNavigate("principal")} />
       </div>
       <div className="menu-columna-2">
         <h1 className="titulo">Ciudades</h1>
