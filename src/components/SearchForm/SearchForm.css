@@ -14,9 +14,10 @@
 }
 
 input:focus {
-    border-color: rgba(138, 43, 226, 0.5);
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 0, 255, 0.6);
-    outline: 0 none;
+  border-color: rgba(138, 43, 226, 0.5);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+    0 0 8px rgba(128, 0, 255, 0.6);
+  outline: 0 none;
 }
 
 .formulario button {
@@ -34,7 +35,7 @@ input:focus {
 }
 
 .error-message {
-    margin-top: 15px;
-    color: red;
-    font-weight: bold;
+  margin-top: 15px;
+  color: red;
+  font-weight: bold;
 }
