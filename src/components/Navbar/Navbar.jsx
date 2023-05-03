@@ -20,8 +20,10 @@ export const Navbar = () => {
   useEffect(() => {
     if (rutaActual === "/" || rutaActual.includes("/search/")) {
       setLinkActivo("principal");
-    } else {
+    } else if (rutaActual === "/historial") {
       setLinkActivo("historial");
+    }else {
+      setLinkActivo("");
     }
   }, []);
 

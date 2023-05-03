@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./LayoutInfo.css";
+import "./LayoutCard.css";
+import PropTypes from "prop-types";
 
-export const LayoutInfo = (props) => {
+export const LayoutCard = (props) => {
   const [minimizar, setMinimizar] = useState(true);
 
   const handleMinimizar = () => {
@@ -10,7 +11,7 @@ export const LayoutInfo = (props) => {
 
   return (
     <div className="container-layout">
-      <div className="ventana" style={{ height: minimizar ? (props.height || 250) + "px" : "35px" }}>
+      <div className="ventana" style={{ height: minimizar ? props.height + "px" : "35px" }}>
         <div className="header">
           <div className="header-columna-1"></div>
           <div className="header-columna-2">
@@ -26,4 +27,14 @@ export const LayoutInfo = (props) => {
       </div>
     </div>
   );
+};
+
+LayoutCard.propTypes = {
+  titulo: PropTypes.string,
+  height: PropTypes.number
+};
+
+LayoutCard.defaultProps = {
+  titulo: "Información",
+  height: 230
 };
