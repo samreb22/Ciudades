@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+
+.bandera{
+    border: 1px solid;
+    width: 210px;
+    height: 130px;
+    margin: 20px;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    margin-right: 5px;
+    font-size: 17px;
+}

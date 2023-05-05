@@ -36,5 +36,5 @@ LayoutCard.propTypes = {
 
 LayoutCard.defaultProps = {
   titulo: "Información",
-  height: 230
+  height: 210
 };
