@@ -4,7 +4,7 @@ import { SearchForm } from "../../components/SearchForm/SearchForm";
 const PrincipalPage = () => {
   return (
     <div>
-      <SearchForm></SearchForm>
+      <SearchForm />
     </div>
   );
 };

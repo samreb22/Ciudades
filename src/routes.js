@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import PrincipalPage from "./pages/PrincipalPage/PrincipalPage";
 import ResultadosPage from "./pages/ResultadosPage/ResultadosPage";
 import HistorialPage from "./pages/HistorialPage/HistorialPage";
+import { Loading } from "./components/Loading/Loading";
 
 const ErrorPage = React.lazy(() => import("./pages/ErrorPage/ErrorPage"));
 
@@ -11,15 +12,15 @@ const ErrorPage = React.lazy(() => import("./pages/ErrorPage/ErrorPage"));
 export const AppRouter = () => {
   return (
     <Router>
-      <Navbar></Navbar>
+      <Navbar />
       <Routes>
-        <Route exact path="/" element={<PrincipalPage></PrincipalPage>}></Route>
-        <Route exact path="/search/:code" element={<ResultadosPage></ResultadosPage>}></Route>
-        <Route exact path="/historial" element={<HistorialPage></HistorialPage>}></Route>
+        <Route exact path="/" element={<PrincipalPage />}></Route>
+        <Route exact path="/search/:code" element={<ResultadosPage />}></Route>
+        <Route exact path="/historial" element={<HistorialPage />}></Route>
         <Route
           path="*"
           element={
-            <Suspense fallback={<>...</>}>
+            <Suspense fallback={<Loading />}>
               <ErrorPage />
             </Suspense>
           }

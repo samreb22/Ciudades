@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+}
+
+.informacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  font-size: 17px;
+  margin-left: 20px;
+}
+
+.botonMapa {
+  background-color: blueviolet;
+  border-radius: 10px;
+  border: 1px solid;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 35px 35px 35px auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.botonMapa:hover {
+  background-color: rgb(92, 22, 157);
+  transition: 0.5s;
+}
+
+.botonMapa p {
+  color: white;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.botonMapa img {
+  width: 75px;
+  height: 50px;
+}

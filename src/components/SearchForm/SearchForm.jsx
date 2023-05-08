@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SearchForm.css";
 
-export const SearchForm = () => {
+export const SearchForm = (props) => {
   const [postalCode, setPostalCode] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ export const SearchForm = () => {
     <div className="container-searchform">
       <form className="formulario" onSubmit={handleSubmit}>
         <input type="text" placeholder="Introduce un código postal..." onChange={handleChange} value={postalCode} />
-        <button type="submit">Buscar</button>
+        <button type="submit" style={{pointerEvents: props.loading ? "none" : "auto", opacity: props.loading ? "0" : "100"}}>Buscar</button>
       </form>
       <p className="error-message">{errorMessage}</p>
     </div>
