@@ -5,14 +5,15 @@ import PrincipalPage from "./pages/PrincipalPage/PrincipalPage";
 import ResultadosPage from "./pages/ResultadosPage/ResultadosPage";
 import HistorialPage from "./pages/HistorialPage/HistorialPage";
 import { Loading } from "./components/Loading/Loading";
+import { HistorialContextProvider } from "./context/HistorialContext";
 
 const ErrorPage = React.lazy(() => import("./pages/ErrorPage/ErrorPage"));
-
 
 export const AppRouter = () => {
   return (
     <Router>
       <Navbar />
+      <HistorialContextProvider>
       <Routes>
         <Route exact path="/" element={<PrincipalPage />}></Route>
         <Route exact path="/search/:code" element={<ResultadosPage />}></Route>
@@ -26,6 +27,7 @@ export const AppRouter = () => {
           }
         ></Route>
       </Routes>
+      </HistorialContextProvider>
     </Router>
   );
 };
