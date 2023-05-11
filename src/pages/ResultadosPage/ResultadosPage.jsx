@@ -18,7 +18,7 @@ const ResultadosPage = () => {
       {loading ? (
         <Loading />
       ) : error ? (
-        <p style={{margin: "20px 40px", color: "#424242"}}>Sin resultados</p>
+        <p style={{margin: "20px 40px", color: "blueviolet", fontWeight: "bold"}}>Sin resultados</p>
       ) : (
         <>
           <LayoutCard titulo="Información política">

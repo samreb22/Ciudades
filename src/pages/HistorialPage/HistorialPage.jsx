@@ -12,6 +12,9 @@ const HistorialPage = () => {
   };
 
   return (
+    historial.length === 0 ? (
+      <h2 className={styles.sinInformacion}>No hay información en el historial</h2>
+    ) : (
     <div className={styles.container}>
       {historial.map((data, index) => {
         return (
@@ -21,7 +24,7 @@ const HistorialPage = () => {
           </div>
         );
       })}
-    </div>
+    </div>)
   );
 };
 
