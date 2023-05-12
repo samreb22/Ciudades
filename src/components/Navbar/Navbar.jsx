@@ -1,59 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar = () => {
-  const navigate = useNavigate();
-  const [linkActivo, setLinkActivo] = useState("");
   const location = useLocation();
   const rutaActual = location.pathname;
-
-  const onClickHandlerNavigate = (target) => {
-    if (target === "principal") {
-      navigate("/");
-    } else if (target === "historial") {
-      navigate("/historial");
-    }
-    setLinkActivo(target);
-  };
-
-  useEffect(() => {
-    if (rutaActual === "/" || rutaActual.includes("/search/")) {
-      setLinkActivo("principal");
-    } else if (rutaActual === "/historial") {
-      setLinkActivo("historial");
-    }else {
-      setLinkActivo("");
-    }
-  }, []);
 
   return (
     <nav className="menu-navegacion">
       <div className="menu-columna-1">
-        <img src="/images/logo.png" alt="Logo de la app de una ciudad" className="logo" onClick={() => onClickHandlerNavigate("principal")} />
+        <NavLink exact to="/">
+          <img src="/images/logo.png" alt="Logo de la app de una ciudad" className="logo" />
+        </NavLink>
       </div>
       <div className="menu-columna-2">
         <h1 className="titulo">Ciudades</h1>
       </div>
       <div className="menu-columna-3">
-        <div
-          className={
-            linkActivo === "principal"
-              ? "link-activado espacio-links"
-              : "link-desactivado espacio-links"
-          }
-          onClick={() => onClickHandlerNavigate("principal")}
-        >
-          <p>Buscar</p>
-        </div>
-        <div
-          className={
-            linkActivo === "historial" ? "link-activado" : "link-desactivado"
-          }
-          onClick={() => onClickHandlerNavigate("historial")}
-        >
-          <p>Historial</p>
-        </div>
+        <NavLink exact to="/" className={({ isActive }) => isActive || rutaActual.includes("search") ? "link-activado" : "link-desactivado"}>Buscar</NavLink>
+        <NavLink exact to="/historial" className={({ isActive }) => isActive ? "link-activado" : "link-desactivado"}>Historial</NavLink>
       </div>
     </nav>
   );

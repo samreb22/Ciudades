@@ -23,6 +23,7 @@
   justify-content: center;
   width: 400px;
   margin-top: 70px;
+  column-gap: 25px;
 }
 
 .logo {
@@ -36,10 +37,6 @@
   font-size: 5em;
   font-weight: 300;
   text-align: center;
-}
-
-.espacio-links {
-  margin-right: 25px;
 }
 
 .link-activado {
