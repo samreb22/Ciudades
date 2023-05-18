@@ -1,0 +1,41 @@
+.contenido {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo {
+  font-weight: 500;
+  font-size: 95px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: rgb(225, 71, 71);
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.error span {
+  color: black;
+}
+
+.mensaje {
+  font-size: 18px;
+}
+
+.boton {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: blueviolet;
+  border-radius: 5px;
+  color: white;
+}
+
+.boton:hover {
+  background-color: rgb(92, 22, 157);
+  transition: 0.5s;
+  cursor: pointer;
+}
