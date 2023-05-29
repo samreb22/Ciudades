@@ -12,14 +12,11 @@
   margin-bottom: 10px;
 }
 
-.error {
-  color: rgb(225, 71, 71);
-  font-size: 17px;
+.notFound {
   margin-bottom: 20px;
-}
-
-.error span {
-  color: black;
+  font-weight: bold;
+  color: blueviolet;
+  font-size: 22px;
 }
 
 .mensaje {

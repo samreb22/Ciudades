@@ -5,19 +5,17 @@ import { Loading } from "./Loading";
 
 let container = null;
 beforeEach(() => {
-  // setup a DOM element as a render target
   container = document.createElement("div");
   document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // cleanup on exiting
   unmountComponentAtNode(container);
   container.remove();
   container = null;
 });
 
-describe("Text for Loading", () => {
+describe("Test for Loading", () => {
   it("Montaje de componente correcto", () => {
     act(() => {
       render(<Loading />, container);

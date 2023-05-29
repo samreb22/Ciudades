@@ -10,12 +10,12 @@ export const InformacionError = () => {
   }
 
   return (
-    <div>
+    <div id="componentInformacionError">
       <div className={styles.contenido}>
         <h1 className={styles.titulo}>404</h1>
-        <p className={styles.error}><b>Oops!</b> <span>La página no ha sido encontrada.</span></p>
+        <p className={styles.notFound}>PÁGINA NO ENCONTRADA</p>
         <p className={styles.mensaje}>La página a la que estás intentando acceder no está disponible.</p>
-        <div className={styles.boton} onClick={handleNavigate}>Volver a inicio</div>
+        <button id="boton" className={styles.boton} onClick={handleNavigate}>Volver a inicio</button>
       </div>
     </div>
   );
