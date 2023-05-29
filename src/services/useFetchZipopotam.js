@@ -21,7 +21,7 @@ export const useFetchZipopotam = (cp) => {
           longitud: data.places[0].longitude
         });
         setLoading(false);
-        setHistorial([{ cp: cp, ciudad: data.places[0]["place name"], comunidad: data.places[0].state }, ...historial,])
+        setHistorial([{ cp: cp, ciudad: data.places[0]["place name"], comunidad: data.places[0].state }, ...historial])
         setError(false);
       })
       .catch((error) => {
